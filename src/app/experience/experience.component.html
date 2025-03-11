@@ -1,0 +1,77 @@
+<!-- 
+
+
+<section class="experience-section" id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <div class="experience-timeline">
+        <div class="holographic-container">
+            <div class="experience-item holographic-card" *ngFor="let exp of experiences">
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <h3 class="company-name">{{exp.company}}</h3>
+                        <span class="duration">{{exp.startDate}} - {{exp.endDate}}</span>
+                    </div>
+                    <h4 class="job-title">{{exp.position}}</h4>
+                    <ul class="responsibilities">
+                        <li *ngFor="let responsibility of exp.responsibilities">
+                            {{responsibility}}
+                        </li>
+                    </ul>
+                    <div class="technologies">
+                        <span class="tech-tag" *ngFor="let tech of exp.technologies">
+                            {{tech}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+   -->
+
+
+
+   <section class="experience-section parallax" id="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div >
+        <div class="holographic-container">
+          <div class="experience-item holographic-card" *ngFor="let exp of experiences">
+            <div class="experience-content">
+              <div class="experience-header">
+                <h3 class="company-name">{{exp.company}}</h3>
+                <span class="duration">{{exp.startDate}} - {{exp.endDate}}</span>
+              </div>
+              <h4 class="job-title">{{exp.position}}</h4>
+              <ul class="responsibilities">
+                <li *ngFor="let responsibility of exp.responsibilities">
+                  {{responsibility}}
+                </li>
+              </ul>
+              <div class="technologies">
+                <span class="tech-tag" *ngFor="let tech of exp.technologies">
+                  {{tech}}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        // Add event listener to window scroll
+        window.addEventListener('scroll', function() {
+          let parallax = document.querySelector('.parallax');
+          let scrollPosition = window.scrollY;
+      
+          // Adjust the background position to create the parallax effect
+          parallax.style.backgroundPosition = 'center ' + (scrollPosition * 0.3) + 'px'; // 0.3 defines the speed of the effect
+        });
+      </script>
+  </section>
+  

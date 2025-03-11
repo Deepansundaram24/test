@@ -1,0 +1,236 @@
+/* Global Styles */
+// .head{
+//   background-color: #00cfc8;
+// }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+/* Header Styles */
+.header {
+  max-width: 90%;
+  padding: 20px 10px;
+  margin: 0 auto;
+  color: #3ea6a1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-top: 10px;
+  line-height: normal;
+}
+
+.header .logo-name {
+  font-family: "Agustina Regular";
+  font-weight: bold;
+  color: #55198b;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.header .logo-name:hover {
+  color: rgb(117, 92, 92);
+}
+
+/* Navigation Styles */
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header li {
+  margin-right: 20px;
+}
+
+.header li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.header li a:hover {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Mobile Menu Styles */
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  padding: 10px;
+}
+
+.navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.navicon:before,
+.navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.navicon:before {
+  top: 5px;
+}
+
+.navicon:after {
+  top: -5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header ul {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-btn:checked ~ ul {
+    display: block;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+}
+
+/* Footer Styles */
+.footer_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+/* Additional Styles */
+.subtitle {
+  color: red;
+}
+
+/* Hover Effects for Menu Items */
+/* Menu Color Scheme Example */
+
+/* Menu Styles with Modern Hover Animation */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.menu a {
+  text-decoration: none;
+  color: black; /* Initial color */
+  padding: 10px 20px; /* Add more padding for better visibility */
+  font-size: 16px;
+  display: block;
+  border-radius: 5px; /* Apply curved edges to each menu item */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Hover Effects with Different Colors and Animations */
+.menu .about a:hover {
+  background-color: #84c8ef; /* Soft Blue for About */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.menu .skills a:hover {
+  background-color: #facf39; /* Vibrant Yellow for Skills */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.menu .education a:hover {
+  background-color: #137dc5; /* True Blue for Education */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.menu .projects a:hover {
+  background-color: #bf1922; /* Red for Projects */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.menu .experiences a:hover {
+  background-color: #112d4e; /* Midnight Blue for Experiences */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.menu .contact a:hover {
+  background-color: #00cfc8; /* Aquamarine for Contact */
+  transform: scale(1.05); /* Slightly scale up on hover */
+  color: black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Additional Animation Effects */
+.menu li:hover {
+  transform: translateY(-3px); /* Move up slightly on hover */
+}

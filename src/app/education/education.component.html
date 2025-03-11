@@ -1,0 +1,50 @@
+<div class="prt_about_edulearn_wrapper" id="education">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="prt_heading_wrapper">
+      <div class="prt_heading">
+        <h1 class="timeline-heading">Education 💻</h1>
+      </div>
+    </div>
+    <div class="prt_about_learnsection">
+      <div *ngFor="let i of timeline; let idx = index" class="prt_about_learncard" [ngStyle]="{ 'animation-delay': idx * 0.2 + 's' }">
+        <div class="prt_about_learncard_icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="prt_about_learncard_content">
+          <div class="prt_about_learncard_year">
+            <h1>{{ i.duration }}</h1>
+          </div>
+          <div class="prt_about_learncard_info">
+            <h4>{{ i.heading }}</h4>
+            <span>{{ i.subtitle }}</span>
+          </div>
+        </div>      
+      </div>
+      <div class="prt_about_certification_wrapper" id="certification">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="prt_heading_wrapper">
+            <div class="prt_heading">
+              <h1 class="timeline-heading">Certifications 🎓</h1>
+            </div>
+          </div>
+          <div class="prt_about_certsection">
+            <div class="prt_about_certcard">
+              <div class="prt_about_certcard_icon">
+                <img src="assets/images/aws-certified-cloud-practitioner.png" alt="AWS Certification Badge" class="aws-badge">
+              </div>
+              <div class="prt_about_certcard_content">
+                <div class="prt_about_certcard_info">
+                  <h4>AWS Certified Solutions Architect</h4>
+                  <span>Issued by Amazon Web Services (AWS)</span>
+                  <span>Issued Date: March 2025</span>
+                  <a href="https://www.credly.com/badges/f2a01019-9ec9-4357-a39f-f930e1128388/public_url" target="_blank" class="badge-link">View Badge</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

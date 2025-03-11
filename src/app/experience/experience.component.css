@@ -1,0 +1,186 @@
+/* Parallax Background */
+/* .parallax {
+  position: relative;
+  background-image: url('https://1.bp.blogspot.com/-evHUgclJD1Y/X0uYfdb7YqI/AAAAAAAATEo/yYNfDwrY5MEz7fXCYw-R7WiDvRgofF_sgCLcBGAsYHQ/s1336/parallax.JPG'); /* Add your background image URL here */
+  /* background-attachment: fixed;  /* Keeps the background fixed in place */
+  /* background-size: cover;       Ensures the image covers the whole section */
+  /* background-position: center;  Centers the background image */
+  /* height: 100vh;                Makes the section full screen */
+/* } */ 
+
+/* General Section Styles */
+.experience-section {
+  padding: 4rem 0;
+  background-color: #fdfefe;
+}
+
+.experience-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2; /* Ensures content appears on top of the background */
+}
+
+.experience-section .section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #000000;
+  font-size: 2.5rem;
+}
+
+/* Timeline and Experience Items */
+.experience-section  {
+  position: relative;
+}
+
+.experience-section .experience-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-section .experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-section .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience-section .company-name {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.experience-section .duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.experience-section .job-title {
+  color: #3498db;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.experience-section .responsibilities {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.experience-section .responsibilities li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.experience-section .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.experience-section .technologies .tech-tag {
+  background-color: #e1f5fe;
+  color: #0288d1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+/* Holographic Card Styles */
+.holographic-container {
+  display: flex;
+  flex-direction: column; /* Changed to column to stack items vertically */
+  align-items: center;
+  min-height: 100vh;
+  
+  padding: 2rem;
+  gap: 2rem; /* Space between cards */
+}
+
+.experience-item.holographic-card {
+  background: #ddd1d1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  padding: 2rem;
+  width: 80%; /* Make cards take up most of the container width */
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 1rem 0; /* Vertical spacing between cards */
+}
+
+.experience-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.experience-item .company-name {
+  color: rgb(106, 207, 223);
+  margin-bottom: 0.5rem;
+}
+
+.experience-item .duration {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.experience-item .job-title {
+  color: #0ff;
+  margin: 1rem 0;
+}
+
+.experience-item .responsibilities {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1rem 0;
+}
+
+.experience-item .tech-tag {
+  display: inline-block;
+  background: rgba(151, 197, 197, 0.1);
+  color: #0ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  margin: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Holographic Card Hover Effects */
+.experience-item.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg, transparent, transparent 30%, rgba(114, 158, 158, 0.3));
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.experience-item.holographic-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.experience-item.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-item.holographic-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

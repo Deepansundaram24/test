@@ -1,0 +1,248 @@
+/* General Wrapper */
+.prt_about_edulearn_wrapper {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: #f4f7fb;
+  padding: 4rem 0;
+}
+
+/* Header Styles */
+.timeline-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* Card Layout */
+.prt_about_learnsection {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 2rem; /* Space between cards */
+  padding: 0 2rem;
+}
+
+/* Individual Card */
+.prt_about_learncard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 0.8s forwards; /* Apply the fade-in animation */
+}
+
+/* Hover Effect on Cards */
+.prt_about_learncard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Icon */
+.prt_about_learncard_icon {
+  font-size: 2.5rem;
+  color: #6c63ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Card Year (Duration) */
+.prt_about_learncard_year h1 {
+  font-size: 3rem;
+  color: #6c63ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Card Info */
+.prt_about_learncard_info h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  text-align: center;
+}
+
+.prt_about_learncard_info span {
+  font-size: 1rem;
+  color: #868e96;
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Animation for Fade In */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .prt_about_learncard {
+    padding: 1.5rem;
+  }
+
+  .prt_about_learncard_year h1 {
+    font-size: 2.5rem;
+  }
+
+  .prt_about_learncard_info h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prt_about_learncard {
+    padding: 1.2rem;
+  }
+
+  .prt_about_learncard_year h1 {
+    font-size: 2rem;
+  }
+
+  .prt_about_learncard_info h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Icon styling */
+.fas {
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-weight: 900;
+}
+/* General Wrapper for Certification Section */
+.prt_about_certification_wrapper {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: #f4f7fb;
+  padding: 4rem 0;
+}
+
+/* Header for Certification Section */
+.timeline-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* Cert Section Layout */
+.prt_about_certsection {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 2rem; /* Space between cards */
+  padding: 0 2rem;
+}
+
+/* Individual Certification Card */
+.prt_about_certcard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 0.8s forwards; /* Apply the fade-in animation */
+}
+
+/* Hover Effect on Cert Cards */
+.prt_about_certcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Certification Icon (AWS Badge) */
+.prt_about_certcard_icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* AWS Badge Styling */
+.aws-badge {
+  width: 100px; /* Adjust size */
+  height: auto;
+  max-width: 100%; /* Make sure it scales well */
+  margin-bottom: 1rem;
+}
+
+/* Certification Info */
+.prt_about_certcard_info h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  text-align: center;
+}
+
+.prt_about_certcard_info span {
+  font-size: 1rem;
+  color: #868e96;
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Link to View Badge */
+.badge-link {
+  font-size: 1rem;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.badge-link:hover {
+  text-decoration: underline;
+}
+
+/* Animation for Fade In */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .prt_about_certcard {
+    padding: 1.5rem;
+  }
+
+  .prt_about_certcard_info h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .prt_about_certcard {
+    padding: 1.2rem;
+  }
+
+  .prt_about_certcard_info h4 {
+    font-size: 1.2rem;
+  }
+}
